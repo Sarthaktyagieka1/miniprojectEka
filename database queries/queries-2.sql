@@ -1,5 +1,1033 @@
 USE springbootapps;
 
+CREATE TABLE IF NOT EXISTS `springbootapps`.`tbl_category` (
+  `id` BIGINT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `category_name` VARCHAR(255) NULL DEFAULT NULL);
+
+
+CREATE TABLE IF NOT EXISTS `springbootapps`.`tbl_product` (
+  `id` BIGINT(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `sku` VARCHAR(255) DEFAULT NULL,
+  `name` VARCHAR(255) DEFAULT NULL,
+  `description` VARCHAR(255) DEFAULT NULL,
+  `unit_price` DECIMAL(13,2) DEFAULT NULL,
+  `image_url` VARCHAR(255) DEFAULT NULL,
+  `active` BIT DEFAULT 1,
+  `units_in_stock` INT(11) DEFAULT NULL,
+   `date_created` DATETIME DEFAULT NULL,
+  `last_updated` DATETIME DEFAULT NULL,
+  `category_id` BIGINT(20) NOT NULL,
+  FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`)
+);
+
+INSERT INTO tbl_category(category_name) VALUES ('Phones');
+INSERT INTO tbl_category(category_name) VALUES ('Laptops');
+INSERT INTO tbl_category(category_name) VALUES ('Shoes');
+INSERT INTO tbl_category(category_name) VALUES ('Books');
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Phones-100', 
+    'Apple Iphone', 
+    'New Apple Iphone smart Phone',
+    'assets/images/Phones/Phones-100.jpg',
+    1,
+    100,
+    60000.00,
+    1, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Phones-101', 
+    'Apple Iphone 13 mini (128 GB)', 
+    'Latest Apple Iphone.',
+    'assets/images/Phones/Phones-101.jpg',
+    1,
+    100,
+    70000.00,
+    1, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Phones-102', 
+    'New Apple iPhone 12 Mini', 
+    'New Apple iPhone 12 Mini (64GB) - Black',
+    'assets/images/Phones/Phones-102.jpg',
+    1,
+    100,
+    80000.00,
+    1, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Phones-103', 
+    'New Apple iPhone 12 Pro (128GB)', 
+    'New Apple iPhone 12 Pro (128GB) - Graphite',
+    'assets/images/Phones/Phones-103.jpg',
+    1,
+    100,
+    90000.00,
+    1, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Phones-104', 
+    '5S Gold Compatible with iPhone', 
+    '5S Gold Compatible with iPhone with 8 Mega Pixel Camera (16GB Internal Memory)',
+    'assets/images/Phones/Phones-104.jpg',
+    1,
+    100,
+    75000.00,
+    1, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Phones-105', 
+    'Apple iPhone XR (64GB)', 
+    'Apple iPhone XR (64GB) - (Product) RED',
+    'assets/images/Phones/Phones-105.jpg',
+    1,
+    100,
+    50000.00,
+    1, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Phones-106', 
+    'Samsung Galaxy M12 (Blue,4GB RAM, 64GB Storage)', 
+    'Samsung Galaxy M12 (Blue,4GB RAM, 64GB Storage) 6000 mAh with 8nm Processor | True 48 MP Quad Camera | 90Hz Refresh Rate',
+    'assets/images/Phones/Phones-106.jpg',
+    1,
+    100,
+    60000.00,
+    1, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Phones-107', 
+    'Samsung Galaxy M32 (Light Blue, 6GB RAM, 128GB Storage)', 
+    'Samsung Galaxy M32 (Light Blue, 6GB RAM, 128GB Storage) 6 Months Free Screen Replacement for Prime',
+    'assets/images/Phones/Phones-107.jpg',
+    1,
+    100,
+    76000.00,
+    1, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Phones-108', 
+    'Samsung Galaxy A12', 
+    'Samsung Galaxy A12 (Black, 6GB RAM, 128GB Storage) with No Cost EMI/Additional Exchange Offers',
+    'assets/images/Phones/Phones-108.jpg',
+    1,
+    100,
+    15999.00,
+    1, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Phones-109', 
+    'Samsung Galaxy A03s (Black)', 
+    'Samsung Galaxy A03s (Black, 3GB RAM, 32GB Storage) with No Cost EMI/Additional Exchange Offers',
+    'assets/images/Phones/Phones-109.jpg',
+    1,
+    100,
+    9000.00,
+    1, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Laptops-100', 
+    'HP 15 Ryzen 3 Thin & Light 15.6-inch (39.6 cms)', 
+    'HP 15 Ryzen 3 Thin & Light 15.6-inch (39.6 cms) FHD Laptop (Ryzen 3 3250U/8GB/256GB SSD/Windows 10/MS Office/1.69 kg), 15s-gy0501AU, Silver',
+    'assets/images/Laptops/Laptops-100.jpg',
+    1,
+    100,
+    40000.00,
+    2, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Laptops-101', 
+    'Acer Nitro 5 AN515-57 Gaming Laptop', 
+    'Acer Nitro 5 AN515-57 Gaming Laptop | Intel Core i5-11400H | NVIDIA GeForce RTX 3050 Laptop Graphics | 15.6" FHD 144Hz IPS Display |16GB |256GB SSD+1TB',
+    'assets/images/Laptops/Laptops-101.jpg',
+    1,
+    100,
+    50000.00,
+    2, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Laptops-102', 
+    'Dell Vostro 3405 14" (35.56cms) HD', 
+    'Dell Vostro 3405 14" (35.56cms) HD AG Display Laptop (AMD Silver 3050U / 4GB / 256 SSD / Integrated Graphics / Win 10 + MSO/ Black) D552147WIN9BE',
+    'assets/images/Laptops/Laptops-102.jpg',
+    1,
+    100,
+    60000.00,
+    2, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Laptops-103', 
+    'Lenovo IdeaPad Slim 1 Intel Celeron N4020 11.6" (29.46cm)', 
+    'Lenovo IdeaPad Slim 1 Intel Celeron N4020 11.6" (29.46cm) HD Thin & Light Laptop (4GB/256 GB SSD/Windows 10/MS Office/Platinum Grey/1.2Kg), 81VT0071IN',
+    'assets/images/Laptops/Laptops-103.jpg',
+    1,
+    100,
+    70000.00,
+    2, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Laptops-104', 
+    'Dell 15 (2021) Ryzen 3-3250U Laptop', 
+    'Dell 15 (2021) Ryzen 3-3250U Laptop, 8GB DDR4, 256GB SSD, Win 10 + MS Office, Radeon Graphics, 15.6" (39.62 cms) FHD Display, Carbon Black',
+    'assets/images/Laptops/Laptops-104.jpg',
+    1,
+    100,
+    80000.00,
+    2, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Laptops-105', 
+    'Dell 15 (2021) Athlon Silver 3050U Laptop', 
+    'Dell 15 (2021) Athlon Silver 3050U Laptop, 4GB, 256GB SSD, Win 10 + MS Office, 15.6" (39.61 cms) FHD Display, Radeon Graphics, Soft Mint Color ',
+    'assets/images/Laptops/Laptops-105.jpg',
+    1,
+    100,
+    90000.00,
+    2, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Laptops-106', 
+    'HP Chromebook 14-inch (35.56 cms)', 
+    'HP Chromebook 14-inch (35.56 cms) Thin & Light Touchscreen Laptop (Celeron N4020/4GB/64GB eMMC + 256GB Expandable Storage/Chrome OS/1.46 kgs Light',
+    'assets/images/Laptops/Laptops-106.jpg',
+    1,
+    100,
+    45000.00,
+    2, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Laptops-107', 
+    'AVITA Cosmos 2 in 1 Celeron Dual Core', 
+    'AVITA Cosmos 2 in 1 Celeron Dual Core - (4 GB/64 GB EMMC Storage/Windows 10 Home) NS12T5IN021P 2 in 1 Laptop (11.6 inch, Charcoal Grey, 1.327 kg)',
+    'assets/images/Laptops/Laptops-107.jpg',
+    1,
+    100,
+    100000.00,
+    2, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Laptops-108', 
+    'Acer Extensa 15 Thin & Light', 
+    'Acer Extensa 15 Thin & Light Intel Processor Pentium Silver N5030 15.6 inches Business Laptop (4GB RAM/1TB HDD/Windows 10 Home/Integrated Graphic',
+    'assets/images/Laptops/Laptops-108.jpg',
+    1,
+    100,
+    50000.00,
+    2, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Laptops-109', 
+    'HP Pavilion (2021)', 
+    'HP Pavilion (2021) Intel 11th Gen Core i5 14 inches FHD Screen Thin & Light Laptop, 16GB RAM, 512GB SSD, Iris Xe Graphics, Windows 11, MS Office',
+    'assets/images/Laptops/Laptops-109.jpg',
+    1,
+    100,
+    60000.00,
+    2, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Shoes-100', 
+    'Asian Oxygen-01 navy Running shoes', 
+    'Asian Oxygen-01 navy Running shoes dual capsule technology for boys | sports shoes for men | Latest Stylish Casual sneakers for men | Lace up lightweight shoes for running, walking, gym, trekking, hiking & party',
+    'assets/images/Shoes/Shoes-100.jpg',
+    1,
+    100,
+    1500.00,
+    3, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Shoes-101', 
+    'ASIAN Men's Bouncer-01', 
+    'ASIAN Men's Bouncer-01 Sports,Walking,Gym,Training,Running Shoes',
+    'assets/images/Shoes/Shoes-101.jpg',
+    1,
+    100,
+    2000.00,
+    3, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Shoes-102', 
+    'ASIAN Men's Rider-01', 
+    'ASIAN Men's Rider-01 Phylon Sports,Running,Walking Shoes',
+    'assets/images/Shoes/Shoes-102.jpg',
+    1,
+    100,
+    1200.00,
+    3, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Shoes-103', 
+    'ASIAN Men's Cosko', 
+    'ASIAN Men's Cosko Running,Walking,Gym,Training Shoes',
+    'assets/images/Shoes/Shoes-103.jpg',
+    1,
+    100,
+    2200.00,
+    3, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Shoes-104', 
+    'ASIAN Men's shoes', 
+    'ASIAN Men's Wonder-13 Sports Running Shoes',
+    'assets/images/Shoes/Shoes-104.jpg',
+    1,
+    100,
+    1800.00,
+    3, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Shoes-105', 
+    'Nike Men's Flex', 
+    'Nike Men's Flex 2016 Rn Grey Running Shoes',
+    'assets/images/Shoes/Shoes-105.jpg',
+    1,
+    100,
+    9000.00,
+    3, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Shoes-106', 
+    'Nike Men Flex 2019', 
+    'Nike Men Flex 2019 Rn Running Shoes',
+    'assets/images/Shoes/Shoes-106.jpg',
+    1,
+    100,
+    7000.00,
+    3, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Shoes-107', 
+    'Nike Men's M SUPERREP GO', 
+    'Nike Men's M SUPERREP GO 2 DK Smoke Grey/Total Orange-Clear Emerald Low TOP (CZ0604-083)',
+    'assets/images/Shoes/Shoes-107.jpg',
+    1,
+    100,
+    4000.00,
+    3, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Shoes-108', 
+    'Nike Men's Air', 
+    'Nike Men's Air Zoom G.t. Cut Low TOP',
+    'assets/images/Shoes/Shoes-108.jpg',
+    1,
+    100,
+    5500.00,
+    3, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Shoes-109', 
+    'Nike Air Zoom', 
+    'Nike Air Zoom Pegasus 38 Shield Men's Shoes (Numeric_7) Black',
+    'assets/images/Shoes/Shoes-109.jpg',
+    1,
+    100,
+    6600.00,
+    3, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Books-100', 
+    'cPanel User Guide and Tutorial', 
+    'A clear, complete guide to getting the most from cPanel. Anybody who has a web hosting account that provides cPanel, and who wants to get the most from this very powerful tool.',
+    'assets/images/Books/Books-100.jpg',
+    1,
+    100,
+    400.00,
+    4, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Books-101', 
+    'Professional Outlook 2007 Programming', 
+    'Written by one of the most popular and knowledgeable Microsoft Outlook MVPs, this book fills a void in the market for a professional-level Outlook programming book',
+    'assets/images/Books/Books-101.jpg',
+    1,
+    100,
+    500.00,
+    4, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Books-102', 
+    'Pro Java Clustering and Scalability', 
+    'Build clustered and scalable Java-based, real-time applications using Spring Framework, Boot, WebSocket, Cassandra, Redis and RabbitMQ. In this book',
+    'assets/images/Books/Books-102.jpg',
+    1,
+    100,
+    600.00,
+    4, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Books-103', 
+    'Modular Design Frameworks', 
+    'Learn the basic principles of modular design, and then put them into action to create sites that are easy to use, look great.',
+    'assets/images/Books/Books-103.jpg',
+    1,
+    100,
+    700.00,
+    4, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Books-104', 
+    'Applied OpenStack Design Patterns', 
+    'Learn practical and applied OpenStack cloud design solutions to gain maximum control over your infrastructure. You will achieve a complete controlled and customizable platform.',
+    'assets/images/Books/Books-104.jpg',
+    1,
+    100,
+    800.00,
+    4, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Books-105', 
+    'VMware vSphere Performance', 
+    'Covering the latest VMware vSphere software, an essential book aimed at solving vSphere performance problems before they happen',
+    'assets/images/Books/Books-105.jpg',
+    1,
+    100,
+    900.00,
+    4, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,+
+    date_created
+)
+VALUES 
+(
+	'Books-106', 
+    'VMware vSphere For Dummies', 
+    'With virtualization, a single server can host dozens or hundreds of virtual machines running a variety of operating systems, and even hook them together in a virtual network',
+    'assets/images/Books/Books-106.jpg',
+    1,
+    100,
+    1000.00,
+    4, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Books-107', 
+    'Beginning Elastic Stack', 
+    'This book teaches you how to install, configure and implement the Elastic Stack (Elasticsearch, Logstash and Kibana) – the invaluable tool for anyone',
+    'assets/images/Books/Books-107.jpg',
+    1,
+    100,
+    300.00,
+    4, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Books-108', 
+    'Nginx: From Beginner to Pro', 
+    'Teaches you to start up Nginx and quickly take your expertise to a level where you can comfortably work with various aspects of the web server and make informe',
+    'assets/images/Books/Books-108.jpg',
+    1,
+    100,
+    400.00,
+    4, 
+    NOW()
+);
+
+INSERT INTO tbl_product 
+(
+	sku, 
+	name, 
+    description, 
+    image_url, 
+    active, 
+    units_in_stock,
+    unit_price, 
+    category_id,
+    date_created
+)
+VALUES 
+(
+	'Books-109', 
+    'Web Audio API', 
+    'Go beyond HTML5’s Audio tag and boost the audio capabilities of your web application with the Web Audio API. Packed with lots of code examples',
+    'assets/images/Books/Books-109.jpg',
+    1,
+    100,
+    500.00,
+    4, 
+    NOW()
+);
+
+
+
+
 SET foreign_key_checks = 0;
 
 --
