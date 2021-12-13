@@ -565,8 +565,8 @@ INSERT INTO tbl_product
 VALUES 
 (
 	'Shoes-101', 
-    'ASIAN Men's Bouncer-01', 
-    'ASIAN Men's Bouncer-01 Sports,Walking,Gym,Training,Running Shoes',
+    'ASIAN Mens Bouncer-01', 
+    'ASIAN Mens Bouncer-01 Sports,Walking,Gym,Training,Running Shoes',
     'assets/images/Shoes/Shoes-101.jpg',
     1,
     100,
@@ -590,8 +590,8 @@ INSERT INTO tbl_product
 VALUES 
 (
 	'Shoes-102', 
-    'ASIAN Men's Rider-01', 
-    'ASIAN Men's Rider-01 Phylon Sports,Running,Walking Shoes',
+    'ASIAN Mens Rider-01', 
+    'ASIAN Mens Rider-01 Phylon Sports,Running,Walking Shoes',
     'assets/images/Shoes/Shoes-102.jpg',
     1,
     100,
@@ -615,8 +615,8 @@ INSERT INTO tbl_product
 VALUES 
 (
 	'Shoes-103', 
-    'ASIAN Men's Cosko', 
-    'ASIAN Men's Cosko Running,Walking,Gym,Training Shoes',
+    'ASIAN Mens Cosko', 
+    'ASIAN Mens Cosko Running,Walking,Gym,Training Shoes',
     'assets/images/Shoes/Shoes-103.jpg',
     1,
     100,
@@ -640,8 +640,8 @@ INSERT INTO tbl_product
 VALUES 
 (
 	'Shoes-104', 
-    'ASIAN Men's shoes', 
-    'ASIAN Men's Wonder-13 Sports Running Shoes',
+    'ASIAN Mens shoes', 
+    'ASIAN Mens Wonder-13 Sports Running Shoes',
     'assets/images/Shoes/Shoes-104.jpg',
     1,
     100,
@@ -665,8 +665,8 @@ INSERT INTO tbl_product
 VALUES 
 (
 	'Shoes-105', 
-    'Nike Men's Flex', 
-    'Nike Men's Flex 2016 Rn Grey Running Shoes',
+    'Nike Mens Flex', 
+    'Nike Mens Flex 2016 Rn Grey Running Shoes',
     'assets/images/Shoes/Shoes-105.jpg',
     1,
     100,
@@ -715,8 +715,8 @@ INSERT INTO tbl_product
 VALUES 
 (
 	'Shoes-107', 
-    'Nike Men's M SUPERREP GO', 
-    'Nike Men's M SUPERREP GO 2 DK Smoke Grey/Total Orange-Clear Emerald Low TOP (CZ0604-083)',
+    'Nike Mens M SUPERREP GO', 
+    'Nike Mens M SUPERREP GO 2 DK Smoke Grey/Total Orange-Clear Emerald Low TOP (CZ0604-083)',
     'assets/images/Shoes/Shoes-107.jpg',
     1,
     100,
@@ -740,8 +740,8 @@ INSERT INTO tbl_product
 VALUES 
 (
 	'Shoes-108', 
-    'Nike Men's Air', 
-    'Nike Men's Air Zoom G.t. Cut Low TOP',
+    'Nike Mens Air', 
+    'Nike Mens Air Zoom G.t. Cut Low TOP',
     'assets/images/Shoes/Shoes-108.jpg',
     1,
     100,
@@ -766,7 +766,7 @@ VALUES
 (
 	'Shoes-109', 
     'Nike Air Zoom', 
-    'Nike Air Zoom Pegasus 38 Shield Men's Shoes (Numeric_7) Black',
+    'Nike Air Zoom Pegasus 38 Shield Mens Shoes (Numeric_7) Black',
     'assets/images/Shoes/Shoes-109.jpg',
     1,
     100,
@@ -934,7 +934,7 @@ INSERT INTO tbl_product
     active, 
     units_in_stock,
     unit_price, 
-    category_id,+
+    category_id,
     date_created
 )
 VALUES 
